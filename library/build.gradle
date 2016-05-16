@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 23
@@ -24,4 +25,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:cardview-v7:23.3.0'
     compile 'com.pavelsikun:vintage-chroma:1.4'
+}
+
+publish {
+    artifactId = 'mp'
+    userOrg = rootProject.userOrg
+    groupId = rootProject.groupId
+    uploadName = rootProject.uploadName
+    publishVersion = '1.0.0'
+    description = 'Set of views that gives you functionality of preferences together with high flexibility and lovely look.'
+    licences = rootProject.licences
 }

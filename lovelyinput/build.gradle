@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 23
@@ -20,7 +21,17 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':library')
+    compile 'com.yarolegovich:mp:1.0.0'
     compile 'com.yarolegovich:lovely-dialog:1.0.4'
     compile 'com.android.support:appcompat-v7:23.3.0'
+}
+
+publish {
+    artifactId = 'lovelyinput'
+    userOrg = rootProject.userOrg
+    groupId = rootProject.groupId
+    uploadName = rootProject.uploadName
+    publishVersion = '1.0.0'
+    description = 'Implementation of UserInputModule for MaterialPreferences that uses LovelyDialogs library.'
+    licences = rootProject.licences
 }
