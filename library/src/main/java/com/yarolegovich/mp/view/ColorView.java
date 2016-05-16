@@ -125,15 +125,22 @@ public class ColorView extends View {
     }
 
     private class SquareShape implements Shape {
+
+        private int top, left, bottom, right;
+
         @Override
         public void drawSelf(Canvas canvas) {
-            canvas.drawRect(0, 0, getRight(), getHeight(), shapePaint);
-            canvas.drawRect(0, 0, getRight(), getHeight(), borderPaint);
+            canvas.drawRect(left, top, right, bottom, shapePaint);
+            canvas.drawRect(left, top, right, bottom, borderPaint);
         }
 
         @Override
         public void measureSelf() {
-
+            int padding = Utils.dpToPixels(getContext(), PADDING_DP);
+            top = padding;
+            left = padding;
+            bottom = getHeight() - padding;
+            right = getWidth() - padding;
         }
     }
 

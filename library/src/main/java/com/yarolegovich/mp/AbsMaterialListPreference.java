@@ -49,7 +49,7 @@ abstract class AbsMaterialListPreference<T> extends AbsMaterialTextValuePreferen
             } else if (entryValues != null) {
                 entries = entryValues;
             } else {
-                throw new AssertionError("You must provide mp_entry_values or mp_entry_descriptions attribute or both in your XML layout!");
+                throw new AssertionError(getContext().getString(R.string.exc_no_entries_to_list_provided));
             }
         }
     }

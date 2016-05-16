@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">MaterialPrefSample</string>
 
+    <string name="settings">Settings</string>
+    <string name="form">Form</string>
+
     <string name="pkey_experience">pref_key_experience</string>
     <string name="pkey_techs">pref_key_technologies</string>
     <string name="pkey_color">pref_key_fav_color</string>
@@ -12,4 +15,28 @@
     <string name="pkey_temperature">pref_key_temperature</string>
     <string name="pkey_date_format">pref_key_date_format</string>
     <string name="pkey_time_format">pref_key_time_format</string>
+
+    <string name="pdef_location">Kiev</string>
+    <string name="pdef_temp_units">°C</string>
+
+    <string name="performance">Performance</string>
+    <string name="update_interval">Update interval</string>
+    <string name="auto_location">Automatic location</string>
+    <string name="location">Location</string>
+    <string name="appearance">Appearance</string>
+    <string name="temp_units">Temperature units</string>
+    <string name="date_format">Date format</string>
+    <string name="time_format">Time format</string>
+    <string name="help_improve">Help improve</string>
+    <string name="rate_the_lib">Rate the library</string>
+    <string name="donate">Donate</string>
+    <string name="experience">Experience</string>
+    <string name="techs_you_know">Technologies you know</string>
+    <string name="years_of_exp">Years of experience</string>
+    <string name="personal">Personal</string>
+    <string name="fav_color">Favorite color</string>
+    <string name="adequate">I am adequate</string>
+    <string name="use_lovely_module">Use lovely input module</string>
+    <string name="app_configs">App configs</string>
+    <string name="fill_the_form">Fill the form</string>
 </resources>

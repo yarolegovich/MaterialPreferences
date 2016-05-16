@@ -80,7 +80,7 @@ public class MaterialSeekBarPreference extends AbsMaterialPreference<Integer> {
         try {
             return storageModule.getInt(key, Integer.parseInt(defaultValue));
         } catch (NumberFormatException e) {
-            throw new AssertionError("Please provide integer mp_default_value");
+            throw new AssertionError(getContext().getString(R.string.exc_not_int_default));
         }
     }
 

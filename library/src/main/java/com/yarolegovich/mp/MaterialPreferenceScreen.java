@@ -46,6 +46,9 @@ public class MaterialPreferenceScreen extends ScrollView {
     {
         setFillViewport(true);
         LinearLayout container = new LinearLayout(getContext());
+        container.setLayoutParams(new ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
         container.setOrientation(LinearLayout.VERTICAL);
         addView(container);
         this.container = container;

@@ -7,19 +7,21 @@
     android:layout_height="wrap_content"
     tools:context="com.yarolegovich.mp.MainActivity">
 
+    <include layout="@layout/toolbar" />
+
     <com.yarolegovich.mp.MaterialPreferenceCategory
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mpc_title="Performance">
+        app:mpc_title="@string/performance">
 
         <com.yarolegovich.mp.MaterialChoicePreference
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:mp_default_value="24 hours"
             app:mp_entry_values="@array/update_intervals"
             app:mp_key="@string/pkey_update_interval"
             app:mp_show_value="onRight"
-            app:mp_title="Update interval"
-            app:mp_default_value="24 hours"/>
+            app:mp_title="@string/update_interval" />
 
         <com.yarolegovich.mp.MaterialSwitchPreference
             android:id="@+id/pref_auto_loc"
@@ -27,41 +29,41 @@
             android:layout_height="wrap_content"
             app:mp_default_value="true"
             app:mp_key="@string/pkey_auto_location"
-            app:mp_title="Automatic location" />
+            app:mp_title="@string/auto_location" />
 
         <com.yarolegovich.mp.MaterialEditTextPreference
             android:id="@+id/pref_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mp_default_value="Kiev"
+            app:mp_default_value="@string/pdef_location"
             app:mp_key="@string/pkey_location"
             app:mp_show_value="onRight"
-            app:mp_title="Location" />
+            app:mp_title="@string/location" />
 
     </com.yarolegovich.mp.MaterialPreferenceCategory>
 
     <com.yarolegovich.mp.MaterialPreferenceCategory
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mpc_title="Appearance">
+        app:mpc_title="@string/appearance">
 
         <com.yarolegovich.mp.MaterialChoicePreference
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:mp_default_value="@string/pdef_temp_units"
             app:mp_entry_values="@array/temperature_units"
             app:mp_key="@string/pkey_temperature"
             app:mp_show_value="onRight"
-            app:mp_default_value="°C"
-            app:mp_title="Temperature units" />
+            app:mp_title="@string/temp_units" />
 
         <com.yarolegovich.mp.MaterialChoicePreference
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:mp_default_value="Tue, Apr 20"
             app:mp_entry_values="@array/date_formats"
             app:mp_key="@string/pkey_date_format"
             app:mp_show_value="onRight"
-            app:mp_default_value="Tue, Apr 20"
-            app:mp_title="Date format" />
+            app:mp_title="@string/date_format" />
 
         <com.yarolegovich.mp.MaterialChoicePreference
             android:layout_width="match_parent"
@@ -71,28 +73,28 @@
             app:mp_entry_values="@array/time_formats"
             app:mp_key="@string/pkey_time_format"
             app:mp_show_value="onRight"
-            app:mp_title="Time format" />
+            app:mp_title="@string/time_format" />
 
     </com.yarolegovich.mp.MaterialPreferenceCategory>
 
     <com.yarolegovich.mp.MaterialPreferenceCategory
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mpc_title="Help improve">
+        app:mpc_title="@string/help_improve">
 
         <com.yarolegovich.mp.MaterialRightIconPreference
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mp_icon="@drawable/ic_star_border_black_24dp"
             app:mp_icon_tint="@color/textSecondary"
-            app:mp_title="Rate the library" />
+            app:mp_title="@string/rate_the_lib" />
 
         <com.yarolegovich.mp.MaterialRightIconPreference
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mp_icon="@drawable/ic_local_atm_black_24dp"
             app:mp_icon_tint="@color/textSecondary"
-            app:mp_title="Donate" />
+            app:mp_title="@string/donate" />
 
     </com.yarolegovich.mp.MaterialPreferenceCategory>
 

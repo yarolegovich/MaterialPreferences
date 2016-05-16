@@ -26,22 +26,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mp_icon="@drawable/ic_insert_emoticon_black_24dp"
-            app:mp_title="Use lovely input module"
-            app:mp_key="@string/pkey_use_lovely"/>
+            app:mp_key="@string/pkey_use_lovely"
+            app:mp_title="@string/use_lovely_module" />
 
         <com.yarolegovich.mp.MaterialStandardPreference
             android:id="@+id/pref_configs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mp_icon="@drawable/ic_settings_black_24dp"
-            app:mp_title="App configs" />
+            app:mp_title="@string/app_configs" />
 
         <com.yarolegovich.mp.MaterialStandardPreference
             android:id="@+id/pref_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mp_icon="@drawable/ic_supervisor_account_black_24dp"
-            app:mp_title="Fill the form" />
+            app:mp_title="@string/fill_the_form" />
 
     </com.yarolegovich.mp.MaterialPreferenceCategory>
 

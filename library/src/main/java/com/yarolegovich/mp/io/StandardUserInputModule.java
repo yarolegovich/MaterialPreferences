@@ -114,8 +114,9 @@ public class StandardUserInputModule implements UserInputModule {
         try {
             activity = (FragmentActivity) context;
         } catch (ClassCastException exc) {
-            throw new AssertionError("Context should be subclass of FragmentActivity, for example - AppCompatActivity");
+            throw new AssertionError(context.getString(R.string.exc_not_frag_activity_subclass));
         }
+        String tag = colorListener.getClass().getSimpleName();
         new ChromaDialog.Builder()
                 .initialColor(defaultColor)
                 .colorMode(ColorMode.ARGB)
@@ -127,6 +128,6 @@ public class StandardUserInputModule implements UserInputModule {
                     }
                 })
                 .create()
-                .show(activity.getSupportFragmentManager(), "colorDialog");
+                .show(activity.getSupportFragmentManager(), tag);
     }
 }

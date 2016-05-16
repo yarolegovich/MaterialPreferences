@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">MaterialPreferences</string>
+    <string name="exc_not_frag_activity_subclass">Context should be subclass of FragmentActivity, for example - AppCompatActivity</string>
+    <string name="exc_no_entries_to_list_provided">You must provide mp_entry_values or mp_entry_descriptions attribute or both in your XML layout!</string>
+    <string name="exc_not_int_default">Please provide integer mp_default_value</string>
 </resources>
