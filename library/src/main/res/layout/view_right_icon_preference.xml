@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/view_title_summary" />
+
+    <ImageView
+        android:id="@id/mp_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="@dimen/side_margin"
+        android:visibility="gone"/>
+
+</merge>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yarolegovich.mp.MaterialPreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/preference_screen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.yarolegovich.mp.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon" />
+    </FrameLayout>
+
+    <com.yarolegovich.mp.MaterialPreferenceCategory
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.yarolegovich.mp.MaterialSwitchPreference
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mp_icon="@drawable/ic_insert_emoticon_black_24dp"
+            app:mp_title="Use lovely input module"
+            app:mp_key="@string/pkey_use_lovely"/>
+
+        <com.yarolegovich.mp.MaterialStandardPreference
+            android:id="@+id/pref_configs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mp_icon="@drawable/ic_settings_black_24dp"
+            app:mp_title="App configs" />
+
+        <com.yarolegovich.mp.MaterialStandardPreference
+            android:id="@+id/pref_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mp_icon="@drawable/ic_supervisor_account_black_24dp"
+            app:mp_title="Fill the form" />
+
+    </com.yarolegovich.mp.MaterialPreferenceCategory>
+
+</com.yarolegovich.mp.MaterialPreferenceScreen>

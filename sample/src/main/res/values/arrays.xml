@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="temperature_units">
+        <item>°C</item>
+        <item>°F</item>
+        <item>°K</item>
+    </string-array>
+
+    <string-array name="date_formats">
+        <item>Tue, Apr 20</item>
+        <item>April 20</item>
+        <item>April 20, 2016</item>
+        <item>20.04.2016</item>
+        <item>04/20/2016</item>
+    </string-array>
+
+    <string-array name="time_format_descriptions">
+        <item>24 hour</item>
+        <item>12 hour</item>
+    </string-array>
+
+    <string-array name="update_intervals">
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>8 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+    </string-array>
+
+    <string-array name="time_formats">
+        <item>HH:mm</item>
+        <item>hh:mm a</item>
+    </string-array>
+
+    <string-array name="technologies">
+        <item>Android SDK</item>
+        <item>Retrofit</item>
+        <item>Dagger</item>
+        <item>RxAndroid</item>
+        <item>OpenCV</item>
+    </string-array>
+
+</resources>

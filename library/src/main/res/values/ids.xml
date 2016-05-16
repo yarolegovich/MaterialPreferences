@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mp_title" type="id"/>
+    <item name="mp_summary" type="id"/>
+    <item name="mp_icon" type="id"/>
+
+    <item name="mp_checkable" type="id"/>
+</resources>

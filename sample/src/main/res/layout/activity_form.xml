@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FillTheFormActivity">
+
+    <com.yarolegovich.mp.MaterialPreferenceScreen
+        android:id="@+id/preference_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yarolegovich.mp.MaterialPreferenceCategory
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mpc_title="Experience">
+
+            <com.yarolegovich.mp.MaterialMultiChoicePreference
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mp_entry_values="@array/technologies"
+                app:mp_key="@string/pkey_techs"
+                app:mp_show_value="onBottom"
+                app:mp_title="Technologies you know" />
+
+            <com.yarolegovich.mp.MaterialSeekBarPreference
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mp_key="@string/pkey_experience"
+                app:mp_default_value="2"
+                app:mp_max_val="10"
+                app:mp_min_val="1"
+                app:mp_show_val="true"
+                app:mp_title="Years of experience" />
+
+        </com.yarolegovich.mp.MaterialPreferenceCategory>
+
+        <com.yarolegovich.mp.MaterialPreferenceCategory
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mpc_title="Personal">
+
+            <com.yarolegovich.mp.MaterialColorPreference
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mp_key="@string/pkey_color"
+                app:mp_title="Favorite color" />
+
+            <com.yarolegovich.mp.MaterialCheckboxPreference
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mp_key="@string/pkey_adequate"
+                app:mp_title="I am mentally adequate" />
+
+        </com.yarolegovich.mp.MaterialPreferenceCategory>
+
+    </com.yarolegovich.mp.MaterialPreferenceScreen>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:onClick="submitForm"
+        android:src="@drawable/ic_done_white_24dp" />
+
+</FrameLayout>

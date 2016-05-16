@@ -1,0 +1,39 @@
+<resources>
+
+    <style name="PreferenceHeaderBase">
+        <item name="android:paddingLeft">@dimen/side_margin</item>
+        <item name="android:paddingRight">@dimen/side_margin</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:colorPrimary</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="PreferenceHeader" parent="PreferenceHeaderBase"/>
+
+    <style name="PreferenceTitle">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:paddingRight">4dp</item>
+    </style>
+
+    <style name="PreferenceSummary">
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:maxLines">4</item>
+    </style>
+
+    <style name="PreferenceValue">
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="PreferenceContainer">
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+</resources>

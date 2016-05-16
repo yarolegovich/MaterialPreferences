@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ConfigActivityTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">#CDDC39</item>
+        <item name="colorPrimaryDark">#AFB42B</item>
+        <item name="colorAccent">#536DFE</item>
+    </style>
+
+    <style name="FormActivityTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>

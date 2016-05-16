@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaterialPreferenceCategory">
+        <attr name="mpc_title" format="string" />
+        <attr name="mpc_title_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AbsMaterialPreference">
+
+        <attr name="mp_icon" format="reference" />
+        <attr name="mp_title" format="string" />
+        <attr name="mp_summary" format="string" />
+
+        <attr name="mp_icon_tint" format="color"/>
+
+        <attr name="mp_key" format="string"/>
+        <attr name="mp_default_value" format="string"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="AbsMaterialTextValuePreference">
+        <attr name="mp_show_value" format="enum">
+            <enum name="notShow" value="0"/>
+            <enum name="onRight" value="1"/>
+            <enum name="onBottom" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AbsMaterialListPreference">
+        <attr name="mp_entry_descriptions" format="reference"/>
+        <attr name="mp_entry_values" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialMultiChoicePreference">
+        <attr name="mp_default_selected" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialSeekBarPreference">
+        <attr name="mp_max_val" format="integer"/>
+        <attr name="mp_min_val" format="integer"/>
+        <attr name="mp_show_val" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialColorPreference">
+        <attr name="mp_initial_color" format="color"/>
+        <attr name="mp_border_color" format="color"/>
+        <attr name="mp_border_width" format="dimension"/>
+        <attr name="mp_indicator_shape" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ColorView">
+        <attr name="mp_cv_border_color" format="color"/>
+        <attr name="mp_cv_color" format="color"/>
+        <attr name="mp_cv_border_width" format="dimension"/>
+        <attr name="mp_cv_shape" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

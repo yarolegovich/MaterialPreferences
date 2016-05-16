@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/view_icon" />
+
+    <include layout="@layout/view_title_summary" />
+
+    <com.yarolegovich.mp.view.ColorView
+        android:id="@+id/mp_color"
+        android:layout_width="36dp"
+        android:layout_height="36dp" />
+
+</merge>

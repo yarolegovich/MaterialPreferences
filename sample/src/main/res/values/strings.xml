@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MaterialPrefSample</string>
+
+    <string name="pkey_experience">pref_key_experience</string>
+    <string name="pkey_techs">pref_key_technologies</string>
+    <string name="pkey_color">pref_key_fav_color</string>
+    <string name="pkey_adequate">pref_key_psycho</string>
+    <string name="pkey_use_lovely">pref_key_use_lovely</string>
+    <string name="pkey_update_interval">pref_key_up_interval</string>
+    <string name="pkey_auto_location">pref_key_auto_loc</string>
+    <string name="pkey_location">pref_key_location</string>
+    <string name="pkey_temperature">pref_key_temperature</string>
+    <string name="pkey_date_format">pref_key_date_format</string>
+    <string name="pkey_time_format">pref_key_time_format</string>
+</resources>
