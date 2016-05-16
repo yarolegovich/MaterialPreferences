@@ -5,15 +5,17 @@ This library is a set of VIEWS (not Preferences) and is aimed to solve this prob
 * Preferences are not flexible. It can be problematic to embed them to another screen (especially for fragment-haters). 
 * Preferences don't allow you to show custom selection dialogs.
 
+![Screenshots](https://raw.githubusercontent.com/yarolegovich/materialpreferences/master/art/screenshots.png)
+
 ## Gradle 
 Add this into your dependencies block.
 ```
-compile 'TODO' 
+compile 'com.yarolegovich:mp:1.0.0' 
 ```
 
 ## Wiki 
 Sample project that shows how to work with different library features is available as [sample module] (https://github.com/yarolegovich/MaterialPreferences/tree/master/sample).
-You can also [download APK] (https://www.dropbox.com/s/aqr7fwmwld5uopp/sample-debug.apk?dl=0) and play with it. 
+You can also [download APK] (https://github.com/yarolegovich/MaterialPreferences/raw/master/sample/sample.apk) and play with it. 
 
 ### Contents
 
