@@ -2,15 +2,19 @@
 
 This library is a set of VIEWS (not Preferences) and is aimed to solve this problems:
 * Preferences look ugly on pre-lollipop.
-* Preferences are not flexible. It can be problematic to embed them to another screen (especially for fragment-haters). 
+* Preferences are not flexible. For example, it can be problematic to embed them to another screen (especially for fragment-haters).
 * Preferences don't allow you to show custom selection dialogs.
 
 ![Screenshots](https://raw.githubusercontent.com/yarolegovich/materialpreferences/master/art/screenshots.png)
 
 ## Gradle 
-Add this into your dependencies block.
+Add this into your dependencies block:
 ```
 compile 'com.yarolegovich:mp:1.0.0' 
+```
+For [LovelyInput] (#lovelyinput) you will also need this:
+```
+compile 'com.yarolegovich:lovelyinput:1.0.1'
 ```
 
 ## Wiki 
@@ -21,10 +25,12 @@ You can also [download APK] (https://github.com/yarolegovich/MaterialPreferences
 
 1. [Types of preferences] (#types-of-preferences)
 2. [UserInputModule] (#userinputmodule)  
-Allows you to show any dialogs (or event not dialogs) you want, when some preferencesare clicked.
+  Allows you to show any dialogs (or event not dialogs) you want, when some preferencesare clicked.
 3. [StorageModule] (#storagemodule)  
- Allows you to save/retrieve values to/from any data source.
-
+  Allows you to save/retrieve values to/from any data source.
+4. [LovelyInput] (#lovelyinput)  
+  Implementation of UserInputModule based on [LovelyDialog] (https://github.com/yarolegovich/LovelyDialog) library.
+ 
 ### Types of preferences
 There are 2 ViewGroup classes: 
 * [MaterialPreferenceScreen] (#materialpreferencescreen)
@@ -207,7 +213,21 @@ If you want to store data inside preferences, but not default - you can use:
 new SharedPrefsStorageFactory("filename")
 ````
 
-###License
+### LovelyInput
+Implementation of [UserInputModule] (#userinputmodule) combined with my another library - [LovelyDialog] (https://github.com/yarolegovich/LovelyDialog). 
+For information on how to use it - [check sample] (https://github.com/yarolegovich/MaterialPreferences/blob/master/sample/src/main/java/com/yarolegovich/materialprefsample/MainActivity.java#L63).
+You can use not only 
+````java
+setKeyIconMappings(Set<String, Integer> mappings);
+````
+but also 
+````java
+setKeyTitleMappings(Set<String, String> mappings);
+setKeyMessageMappings(Set<String, String> mappings);
+````
+[Source code] (https://github.com/yarolegovich/MaterialPreferences/tree/master/lovelyinput/src/main/java/com/yarolegovich/lovelyuserinput) of module can serve you as an example of custom UserInputModule. 
+
+### License
 ```
 Copyright 2016 Yaroslav Shevchuk
 
