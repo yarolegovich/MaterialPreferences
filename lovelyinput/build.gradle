@@ -31,7 +31,7 @@ publish {
     userOrg = rootProject.userOrg
     groupId = rootProject.groupId
     uploadName = rootProject.uploadName
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     description = 'Implementation of UserInputModule for MaterialPreferences that uses LovelyDialogs library.'
     licences = rootProject.licences
 }
