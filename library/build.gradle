@@ -32,7 +32,7 @@ publish {
     userOrg = rootProject.userOrg
     groupId = rootProject.groupId
     uploadName = rootProject.uploadName
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.3'
     description = 'Set of views that gives you functionality of preferences together with high flexibility and lovely look.'
     licences = rootProject.licences
 }
