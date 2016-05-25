@@ -46,6 +46,7 @@ public class MaterialChoicePreference extends AbsMaterialListPreference<String> 
         userInputModule.showSingleChoiceInput(
                 key, getTitle(), entries,
                 entryValues,
+                getItemPosition(getValue()),
                 this);
     }
 
@@ -57,5 +58,16 @@ public class MaterialChoicePreference extends AbsMaterialListPreference<String> 
             }
         }
         return null;
+    }
+
+    protected int getItemPosition(String value) {
+        for (int i = 0; i < entryValues.length; i++) {
+            System.out.println(entryValues[i]);
+            System.out.println(value);
+            if (entryValues[i].equals(value)) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

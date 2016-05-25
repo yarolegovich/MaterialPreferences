@@ -42,7 +42,7 @@ public class MaterialEditTextPreference extends AbsMaterialTextValuePreference<S
 
     @Override
     public void onClick(View v) {
-        userInputModule.showEditTextInput(key, getTitle(), defaultValue, this);
+        userInputModule.showEditTextInput(key, getTitle(), getValue(), this);
     }
 
     @Override
