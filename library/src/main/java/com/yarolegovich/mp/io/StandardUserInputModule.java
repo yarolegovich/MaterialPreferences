@@ -40,8 +40,12 @@ public class StandardUserInputModule implements UserInputModule {
             final Listener<String> listener) {
         final View view = LayoutInflater.from(context).inflate(R.layout.dialog_edittext, null);
         final EditText inputField = (EditText) view.findViewById(R.id.mp_text_input);
-        inputField.setText(defaultValue);
-        inputField.setSelection(defaultValue.length());
+
+        if (defaultValue != null) {
+            inputField.setText(defaultValue);
+            inputField.setSelection(defaultValue.length());
+        }
+
         final Dialog dialog = new AlertDialog.Builder(context)
                 .setTitle(title)
                 .setView(view)
