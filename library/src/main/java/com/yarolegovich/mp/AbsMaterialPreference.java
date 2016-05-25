@@ -16,6 +16,7 @@ import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -206,11 +207,11 @@ abstract class AbsMaterialPreference<T> extends LinearLayout {
     }
 
     protected void onConfigureSelf() {
+        setBackgroundResource(Utils.clickableBackground(getContext()));
         int padding = Utils.dpToPixels(getContext(), 16);
         setPadding(padding, padding, padding, padding);
         setGravity(Gravity.CENTER_VERTICAL);
         setClickable(true);
-        setBackgroundResource(Utils.clickableBackground(getContext()));
     }
 
     protected void onViewCreated() {

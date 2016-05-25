@@ -10,7 +10,7 @@ This library is a set of VIEWS (not Preferences) and is aimed to solve this prob
 ## Gradle 
 Add this into your dependencies block:
 ```
-compile 'com.yarolegovich:mp:1.0.3' 
+compile 'com.yarolegovich:mp:1.0.5' 
 ```
 For [LovelyInput] (#lovelyinput) you will also need this:
 ```

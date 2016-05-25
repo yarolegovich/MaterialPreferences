@@ -62,6 +62,8 @@ public class MaterialPreferenceCategory extends CardView {
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         params.setMargins(0, 0, 0, dpToPixels(getContext(), 4));
 
+        setUseCompatPadding(true);
+
         setRadius(0);
 
         container = (ViewGroup) findViewById(R.id.mpc_container);
