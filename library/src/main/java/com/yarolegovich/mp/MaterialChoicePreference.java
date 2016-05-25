@@ -62,8 +62,6 @@ public class MaterialChoicePreference extends AbsMaterialListPreference<String> 
 
     protected int getItemPosition(String value) {
         for (int i = 0; i < entryValues.length; i++) {
-            System.out.println(entryValues[i]);
-            System.out.println(value);
             if (entryValues[i].equals(value)) {
                 return i;
             }
