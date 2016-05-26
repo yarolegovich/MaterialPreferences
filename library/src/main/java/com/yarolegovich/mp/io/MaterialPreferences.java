@@ -12,6 +12,14 @@ public class MaterialPreferences {
 
     private static final MaterialPreferences instance = new MaterialPreferences();
 
+    private UserInputModule.Factory userInputModuleFactory;
+    private StorageModule.Factory storageModuleFactory;
+
+    private MaterialPreferences() {
+        userInputModuleFactory = new StandardUserInputFactory();
+        storageModuleFactory = new SharedPrefsStorageFactory(null);
+    }
+
     public static MaterialPreferences instance() {
         return instance;
     }
@@ -22,14 +30,6 @@ public class MaterialPreferences {
 
     public static StorageModule getStorageModule(Context context) {
         return instance.storageModuleFactory.create(context);
-    }
-
-    private UserInputModule.Factory userInputModuleFactory;
-    private StorageModule.Factory storageModuleFactory;
-
-    private MaterialPreferences() {
-        userInputModuleFactory = new StandardUserInputFactory();
-        storageModuleFactory = new SharedPrefsStorageFactory(null);
     }
 
     public MaterialPreferences setUserInputModule(UserInputModule.Factory factory) {

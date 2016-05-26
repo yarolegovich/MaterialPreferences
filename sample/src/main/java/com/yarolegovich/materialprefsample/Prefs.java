@@ -9,14 +9,6 @@ public class Prefs {
 
     private static Prefs instance;
 
-    public static void init(Context context) {
-        instance = new Prefs(context);
-    }
-
-    public static Prefs keys() {
-        return instance;
-    }
-
     public final String KEY_USE_LOVELY;
 
     public final String KEY_YEARS_OF_EXP;
@@ -46,4 +38,13 @@ public class Prefs {
         KEY_DATE_FORMAT = context.getString(R.string.pkey_date_format);
         KEY_TIME_FORMAT = context.getString(R.string.pkey_time_format);
     }
+
+    public static void init(Context context) {
+        instance = new Prefs(context);
+    }
+
+    public static Prefs keys() {
+        return instance;
+    }
+
 }
