@@ -40,7 +40,12 @@ public class StandardUserInputModule implements UserInputModule {
             final Listener<String> listener) {
         final View view = LayoutInflater.from(context).inflate(R.layout.dialog_edittext, null);
         final EditText inputField = (EditText) view.findViewById(R.id.mp_text_input);
-        inputField.setText(defaultValue);
+
+        if (defaultValue != null) {
+            inputField.setText(defaultValue);
+            inputField.setSelection(defaultValue.length());
+        }
+
         final Dialog dialog = new AlertDialog.Builder(context)
                 .setTitle(title)
                 .setView(view)
@@ -60,16 +65,25 @@ public class StandardUserInputModule implements UserInputModule {
             CharSequence title,
             CharSequence[] displayItems,
             final CharSequence[] values,
+            int selected,
             final Listener<String> listener) {
         new AlertDialog.Builder(context)
                 .setTitle(title)
-                .setItems(displayItems, new DialogInterface.OnClickListener() {
+                .setSingleChoiceItems(displayItems, selected, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String selected = values[which].toString();
+                        listener.onInput(selected);
+                        dialog.dismiss();
+                    }
+                })
+                /*.setItems(displayItems, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String selected = values[which].toString();
                         listener.onInput(selected);
                     }
-                })
+                })*/
                 .show();
     }
 

@@ -50,6 +50,7 @@ public class LovelyInputModule extends StandardUserInputModule {
             CharSequence title,
             CharSequence[] displayItems,
             final CharSequence[] values,
+            int selected,
             final Listener<String> listener) {
         standardInit(new LovelyChoiceDialog(context)
                 .setItems(displayItems, new LovelyChoiceDialog.OnItemSelectedListener<CharSequence>() {

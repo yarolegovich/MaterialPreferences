@@ -20,6 +20,7 @@ public interface UserInputModule {
             CharSequence title,
             CharSequence[] displayItems,
             CharSequence[] values,
+            int selected,
             Listener<String> listener);
 
     void showMultiChoiceInput(
