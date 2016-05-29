@@ -10,6 +10,8 @@ import android.util.TypedValue;
  */
 public class Utils {
 
+    private Utils() {}
+
     public static int dpToPixels(Context context, int dp) {
         Resources resources = context.getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
