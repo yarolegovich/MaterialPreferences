@@ -24,7 +24,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:cardview-v7:23.3.0'
-    compile 'com.pavelsikun:vintage-chroma:1.4.1'
+    compile 'com.pavelsikun:vintage-chroma:1.5'
 }
 
 publish {
