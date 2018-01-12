@@ -18,8 +18,8 @@ public class CompositeClickListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        for (int i = 0; i < listeners.size(); i++) {
-            listeners.get(i).onClick(v);
+        if (listeners.size() == 1) {
+            listeners.get(0).onClick(v);
         }
     }
 
