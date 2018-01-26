@@ -18,9 +18,6 @@ public class CompositeClickListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        for (View.OnClickListener listener : listeners) {
-            listener.onClick(v);
-        }
     }
 
     public int addListener(View.OnClickListener listener) {
