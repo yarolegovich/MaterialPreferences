@@ -1,16 +1,18 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
-        classpath 'com.novoda:bintray-release:0.3.4'
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.novoda:bintray-release:0.8.0'
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
 
@@ -23,4 +25,11 @@ ext {
     groupId = 'com.yarolegovich'
     uploadName = 'MaterialPreferences'
     licences = ['Apache-2.0']
+
+    compileSdkVersion = 27
+    buildToolsVersion = '26.0.2'
+    targetSdkVersion = 27
+
+    supportLibVersion = '27.0.2'
 }
+
