@@ -20,9 +20,9 @@ android {
 }
 
 dependencies {
-    compile project(':library')
-    compile 'com.yarolegovich:lovely-dialog:1.1.0'
-    compile "com.android.support:appcompat-v7:${rootProject.supportLibVersion}"
+    implementation project(':library')
+    implementation 'com.yarolegovich:lovely-dialog:1.1.0'
+    implementation "com.android.support:appcompat-v7:${rootProject.supportLibVersion}"
 }
 
 publish {
@@ -30,7 +30,7 @@ publish {
     userOrg = rootProject.userOrg
     groupId = rootProject.groupId
     uploadName = rootProject.uploadName
-    publishVersion = '1.0.2'
+    publishVersion = '1.0.9'
     description = 'Implementation of UserInputModule for MaterialPreferences that uses LovelyDialogs library.'
     licences = rootProject.licences
 }

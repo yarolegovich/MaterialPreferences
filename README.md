@@ -10,11 +10,11 @@ This library is a set of VIEWS (not Preferences) and is aimed to solve this prob
 ## Gradle 
 Add this into your dependencies block:
 ```
-compile 'com.yarolegovich:mp:1.0.6' 
+compile 'com.yarolegovich:mp:1.0.9' 
 ```
 For [LovelyInput](#lovelyinput) you will also need this:
 ```
-compile 'com.yarolegovich:lovelyinput:1.0.2'
+compile 'com.yarolegovich:lovelyinput:1.0.9'
 ```
 
 ## Wiki 

@@ -20,7 +20,6 @@ android {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
     implementation "com.android.support:appcompat-v7:${rootProject.supportLibVersion}"
     implementation "com.android.support:cardview-v7:${rootProject.supportLibVersion}"
     implementation ("com.pavelsikun:vintage-chroma:1.5") {
@@ -33,8 +32,8 @@ publish {
     userOrg = rootProject.userOrg
     groupId = rootProject.groupId
     uploadName = rootProject.uploadName
-    publishVersion = '1.0.6'
-    description = 'Set of views that gives you functionality of preferences together with high flexibility and lovely look.'
+    publishVersion = '1.0.9'
+    description = 'A highly flexible set of lovely looking views that provides functionality of preferences.'
     licences = rootProject.licences
 }
 
