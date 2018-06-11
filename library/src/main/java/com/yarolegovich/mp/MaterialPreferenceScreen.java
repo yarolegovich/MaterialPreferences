@@ -6,9 +6,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 import com.yarolegovich.mp.io.UserInputModule;
 import com.yarolegovich.mp.io.StorageModule;
@@ -19,9 +17,7 @@ import java.util.List;
 /**
  * Created by yarolegovich on 01.05.2016.
  */
-public class MaterialPreferenceScreen extends ScrollView {
-
-    private LinearLayout container;
+public class MaterialPreferenceScreen extends LinearLayout {
 
     private UserInputModule userInputModule;
     private StorageModule storageModule;
@@ -44,19 +40,12 @@ public class MaterialPreferenceScreen extends ScrollView {
     }
 
     {
-        setFillViewport(true);
-        LinearLayout container = new LinearLayout(getContext());
-        container.setLayoutParams(new ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT));
-        container.setOrientation(LinearLayout.VERTICAL);
-        addView(container);
-        this.container = container;
+        setOrientation(LinearLayout.VERTICAL);
     }
 
     public void changeViewsVisibility(List<Integer> viewIds, boolean visible) {
         int visibility = visible ? VISIBLE : GONE;
-        changeViewsVisibility(container, viewIds, visibility);
+        changeViewsVisibility(this, viewIds, visibility);
     }
 
     public void setVisibilityController(int controllerId, List<Integer> controlledIds, boolean showWhenChecked) {
@@ -111,12 +100,12 @@ public class MaterialPreferenceScreen extends ScrollView {
 
     public void setUserInputModule(UserInputModule userInputModule) {
         this.userInputModule = userInputModule;
-        setUserInputModuleRecursively(container, userInputModule);
+        setUserInputModuleRecursively(this, userInputModule);
     }
 
     public void setStorageModule(StorageModule storageModule) {
         this.storageModule = storageModule;
-        setStorageModuleRecursively(container, storageModule);
+        setStorageModuleRecursively(this, storageModule);
     }
 
     private void setUserInputModuleRecursively(ViewGroup container, UserInputModule module) {
@@ -140,41 +129,4 @@ public class MaterialPreferenceScreen extends ScrollView {
             }
         }
     }
-
-    @Override
-    public void addView(View child) {
-        if (container != null) {
-            container.addView(child);
-        } else {
-            super.addView(child);
-        }
-    }
-
-    @Override
-    public void addView(View child, int index) {
-        if (container != null) {
-            container.addView(child, index);
-        } else {
-            super.addView(child, index);
-        }
-    }
-
-    @Override
-    public void addView(View child, ViewGroup.LayoutParams params) {
-        if (container != null) {
-            container.addView(child, params);
-        } else {
-            super.addView(child, params);
-        }
-    }
-
-    @Override
-    public void addView(View child, int index, ViewGroup.LayoutParams params) {
-        if (container != null) {
-            container.addView(child, index, params);
-        } else {
-            super.addView(child, index, params);
-        }
-    }
-
 }

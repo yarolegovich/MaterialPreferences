@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".FillTheFormActivity">
 
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
     <com.yarolegovich.mp.MaterialPreferenceScreen
         android:id="@+id/preference_screen"
         android:layout_width="match_parent"
@@ -58,6 +61,7 @@
         </com.yarolegovich.mp.MaterialPreferenceCategory>
 
     </com.yarolegovich.mp.MaterialPreferenceScreen>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
