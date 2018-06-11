@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.yarolegovich.mp.MaterialPreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            tools:context="com.yarolegovich.mp.MainActivity">
+
+<com.yarolegovich.mp.MaterialPreferenceScreen
     android:id="@+id/preference_screen"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="com.yarolegovich.mp.MainActivity">
+    android:layout_height="wrap_content">
 
     <include layout="@layout/toolbar" />
 
@@ -98,4 +103,5 @@
 
     </com.yarolegovich.mp.MaterialPreferenceCategory>
 
-</com.yarolegovich.mp.MaterialPreferenceScreen>
+    </com.yarolegovich.mp.MaterialPreferenceScreen>
+</ScrollView>
