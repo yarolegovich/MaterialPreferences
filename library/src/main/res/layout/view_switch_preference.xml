@@ -5,7 +5,7 @@
 
     <include layout="@layout/view_title_summary" />
 
-    <android.support.v7.widget.SwitchCompat
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@id/mp_checkable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

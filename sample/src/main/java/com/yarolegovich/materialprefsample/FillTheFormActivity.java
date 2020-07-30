@@ -1,11 +1,10 @@
 package com.yarolegovich.materialprefsample;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.yarolegovich.mp.MaterialPreferenceScreen;
 
@@ -30,7 +29,7 @@ public class FillTheFormActivity extends ToolbarActivity {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         new FormInitializer(form).onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
     }

@@ -3,20 +3,18 @@ package com.yarolegovich.mp.io;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AlertDialog;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 
-import com.pavelsikun.vintagechroma.ChromaDialog;
-import com.pavelsikun.vintagechroma.IndicatorMode;
-import com.pavelsikun.vintagechroma.OnColorSelectedListener;
-import com.pavelsikun.vintagechroma.colormode.ColorMode;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.FragmentActivity;
+
+import com.kunzisoft.androidclearchroma.ChromaDialog;
+import com.kunzisoft.androidclearchroma.IndicatorMode;
+import com.kunzisoft.androidclearchroma.colormode.ColorMode;
+import com.kunzisoft.androidclearchroma.listener.OnColorSelectedListener;
 import com.yarolegovich.mp.R;
-import com.yarolegovich.mp.util.Utils;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -130,18 +128,23 @@ public class StandardUserInputModule implements UserInputModule {
         } catch (ClassCastException exc) {
             throw new AssertionError(context.getString(R.string.exc_not_frag_activity_subclass));
         }
-        String tag = colorListener.getClass().getSimpleName();
-        new ChromaDialog.Builder()
+        final String tag = colorListener.getClass().getSimpleName();
+        ChromaDialog dialog = new ChromaDialog.Builder()
                 .initialColor(defaultColor)
                 .colorMode(ColorMode.ARGB)
                 .indicatorMode(IndicatorMode.HEX)
-                .onColorSelected(new OnColorSelectedListener() {
-                    @Override
-                    public void onColorSelected(int color) {
-                        colorListener.onInput(color);
-                    }
-                })
-                .create()
-                .show(activity.getSupportFragmentManager(), tag);
+                .create();
+        dialog.setOnColorSelectedListener(new OnColorSelectedListener() {
+            @Override
+            public void onPositiveButtonClick(int color) {
+                colorListener.onInput(color);
+            }
+
+            @Override
+            public void onNegativeButtonClick(int color) {
+
+            }
+        });
+        dialog.show(activity.getSupportFragmentManager(), tag);
     }
 }

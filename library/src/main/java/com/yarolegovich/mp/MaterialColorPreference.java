@@ -8,10 +8,13 @@ import android.view.View;
 
 import com.yarolegovich.mp.io.StorageModule;
 import com.yarolegovich.mp.io.UserInputModule;
-import com.yarolegovich.mp.io.MaterialPreferences;
 import com.yarolegovich.mp.view.ColorView;
 
-import static com.yarolegovich.mp.R.styleable.*;
+import static com.yarolegovich.mp.R.styleable.MaterialColorPreference;
+import static com.yarolegovich.mp.R.styleable.MaterialColorPreference_mp_border_color;
+import static com.yarolegovich.mp.R.styleable.MaterialColorPreference_mp_border_width;
+import static com.yarolegovich.mp.R.styleable.MaterialColorPreference_mp_indicator_shape;
+import static com.yarolegovich.mp.R.styleable.MaterialColorPreference_mp_initial_color;
 import static com.yarolegovich.mp.view.ColorView.SHAPE_CIRCLE;
 
 /**

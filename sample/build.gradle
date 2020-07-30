@@ -20,8 +20,9 @@ android {
 }
 
 dependencies {
-    implementation "com.yarolegovich:mp:1.0.9"
-    implementation "com.yarolegovich:lovelyinput:1.0.9"
-    implementation "com.android.support:appcompat-v7:${rootProject.supportLibVersion}"
-    implementation "com.android.support:design:${rootProject.supportLibVersion}"
+    implementation deps.annotations
+    implementation deps.androidxCompat
+    implementation deps.designSupport
+    implementation project(':library')
+    implementation project(':lovelyinput')
 }
