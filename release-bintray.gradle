@@ -8,7 +8,7 @@ def upload = [
         groupId    : 'com.yarolegovich',
         uploadName : 'MaterialPreferences',
         description: 'Set of views that gives you functionality of preferences together with high flexibility and lovely look.',
-        version    : '1.1.5',
+        version    : '1.1.6',
         licences   : ['Apache-2.0']
 ]
 

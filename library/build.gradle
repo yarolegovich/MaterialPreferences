@@ -23,6 +23,6 @@ dependencies {
     implementation deps.annotations
     implementation deps.androidxCompat
     implementation deps.cardView
-    implementation deps.colorPicker
+    api deps.colorPicker
 }
 
