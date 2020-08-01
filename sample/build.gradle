@@ -23,6 +23,6 @@ dependencies {
     implementation deps.annotations
     implementation deps.androidxCompat
     implementation deps.designSupport
-    implementation project(':library')
-    implementation project(':lovelyinput')
+    implementation 'com.yarolegovich:mp:1.1.5'
+    implementation 'com.yarolegovich:lovelyinput:1.1.5'
 }
