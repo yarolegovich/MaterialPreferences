@@ -1,0 +1,59 @@
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+def upload = [
+        user       : 'yarolegovich',
+        userOrg    : 'yarolegovich',
+        repository : 'maven',
+        groupId    : 'com.yarolegovich',
+        uploadName : 'MaterialPreferences',
+        description: 'Set of views that gives you functionality of preferences together with high flexibility and lovely look.',
+        version    : '1.1.5',
+        licences   : ['Apache-2.0']
+]
+
+task androidSourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+
+version upload.version
+
+afterEvaluate {
+
+    publishing {
+        publications {
+            LibRelease(MavenPublication) {
+                from components.release
+
+                artifact androidSourcesJar
+
+                artifactId BINTRAY_ARTIFACT_ID
+                groupId upload.groupId
+                version upload.version
+            }
+        }
+    }
+
+    Properties localProps = new Properties()
+    localProps.load(project.rootProject.file('local.properties').newDataInputStream())
+
+    bintray {
+        user = upload.user
+        key = localProps.getProperty('bintray.api_key')
+        publications = ['LibRelease']
+        configurations = ['archives']
+        pkg {
+            name = upload.uploadName
+            repo = upload.repository
+            userOrg = upload.userOrg
+            licenses = upload.licences
+            publish = true
+            dryRun = false
+            version {
+                name = upload.version
+                desc = BINTRAY_DESCRIPTION
+            }
+        }
+    }
+}

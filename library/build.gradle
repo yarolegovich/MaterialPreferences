@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply from: '../release-bintray.gradle'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -24,3 +25,4 @@ dependencies {
     implementation deps.cardView
     implementation deps.colorPicker
 }
+
